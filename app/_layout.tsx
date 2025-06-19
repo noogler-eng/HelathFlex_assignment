@@ -1,29 +1,47 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+// app/_layout.tsx
+import { Slot } from "expo-router";
+import Navbar from "../components/Navbar";
+import { TimerProvider } from "../context/TimerContext";
+import { SafeAreaView, StyleSheet, View } from "react-native";
+import Toast from "react-native-toast-message";
+import { ThemeProvider, useTheme } from "@/context/ThemeContext";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
+export default function MainLayout() {
+  const { theme } = useTheme();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
+    <ThemeProvider>
+      <TimerProvider>
+        <SafeAreaView
+          style={[
+            styles.safeArea,
+            theme === "dark" && { backgroundColor: "#000" },
+          ]}
+        >
+          <Navbar />
+          <View
+            style={[
+              styles.content,
+              theme === "dark" && { backgroundColor: "#111" },
+            ]}
+          >
+            <Slot />
+          </View>
+          <Toast />
+        </SafeAreaView>
+      </TimerProvider>
     </ThemeProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: "#fff",
+  },
+  content: {
+    flex: 1,
+    paddingHorizontal: 12,
+    paddingTop: 8,
+  },
+});
