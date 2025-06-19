@@ -6,12 +6,12 @@ import {
   StyleSheet,
   SectionList,
 } from "react-native";
-import { useTimers } from "@/context/TimerContext";
+import { useTimers } from "../context/TimerContext";
 import { useRouter } from "expo-router";
-import TimerCard from "@/components/TimerCard";
+import TimerCard from "../components/TimerCard";
 // import Hero from "@/components/Hero";
 import { ChevronDown, ChevronRight } from "lucide-react-native";
-import { useTheme } from "@/context/ThemeContext";
+import { useTheme } from "../context/ThemeContext";
 
 export default function HomeScreen() {
   const { state, dispatch } = useTimers();

@@ -5,7 +5,7 @@ import { TimerProvider } from "../context/TimerContext";
 import { StyleSheet, View, StatusBar, Platform } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Toast from "react-native-toast-message";
-import { ThemeProvider, useTheme } from "@/context/ThemeContext";
+import { ThemeProvider, useTheme } from "../context/ThemeContext";
 
 function LayoutContent() {
   const { theme } = useTheme();

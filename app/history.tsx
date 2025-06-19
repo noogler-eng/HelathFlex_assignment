@@ -8,9 +8,9 @@ import {
   Alert,
   RefreshControl,
 } from "react-native";
-import { useTimers } from "@/context/TimerContext";
+import { useTimers } from "../context/TimerContext";
 import Toast from "react-native-toast-message";
-import { useTheme } from "@/context/ThemeContext";
+import { useTheme } from "../context/ThemeContext";
 
 export default function HistoryScreen() {
   const { state, dispatch } = useTimers();

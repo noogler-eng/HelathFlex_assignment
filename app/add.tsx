@@ -10,10 +10,10 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from "react-native";
-import { useTimers, Timer } from "@/context/TimerContext";
+import { useTimers, Timer } from "../context/TimerContext";
 import { useRouter } from "expo-router";
 import Toast from "react-native-toast-message";
-import { useTheme } from "@/context/ThemeContext";
+import { useTheme } from "../context/ThemeContext";
 
 export default function AddTimerScreen() {
   const { dispatch } = useTimers();
