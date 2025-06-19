@@ -33,6 +33,7 @@ When you're ready, run:
 npm run reset-project
 ```
 
+### APK
 - it is working locally and succesfully build apk
 - but when i install apk it crases (i have tried many ways, trying it out first time)
 - https://expo.dev/accounts/0xsharad/projects/react-native-multi-timer/builds/c39bf2b5-3681-463f-bb0d-0557aae1ce72
