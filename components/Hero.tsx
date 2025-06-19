@@ -15,19 +15,16 @@ export default function Hero() {
         style={styles.logo}
         resizeMode="contain"
       />
-
       <Text
         style={[styles.companyName, { color: isDark ? "#f1f5f9" : "#1e293b" }]}
       >
         HealthFlex
       </Text>
-
       <Text
         style={[styles.description, { color: isDark ? "#cbd5e1" : "#666" }]}
       >
         Your wellness companion to balance focus and mindful breaks.
       </Text>
-
       <MaskedView
         maskElement={
           <Text
@@ -54,7 +51,7 @@ export default function Hero() {
       </MaskedView>
     </View>
   );
-}
+} // This closing brace was missing in your original code
 
 const styles = StyleSheet.create({
   container: {

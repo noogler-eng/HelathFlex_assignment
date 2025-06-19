@@ -9,7 +9,7 @@ import {
 import { useTimers } from "@/context/TimerContext";
 import { useRouter } from "expo-router";
 import TimerCard from "@/components/TimerCard";
-import Hero from "@/components/Hero";
+// import Hero from "@/components/Hero";
 import { ChevronDown, ChevronRight } from "lucide-react-native";
 import { useTheme } from "@/context/ThemeContext";
 
@@ -108,7 +108,7 @@ export default function HomeScreen() {
           { backgroundColor: isDark ? "#0f172a" : "#f8fafc" },
         ]}
       >
-        <Hero />
+        {/* <Hero /> */}
         <Text style={[styles.title, { color: isDark ? "#f1f5f9" : "#1e293b" }]}>
           All Timers
         </Text>
@@ -131,7 +131,7 @@ export default function HomeScreen() {
           </Text>
           <TouchableOpacity
             style={styles.createButton}
-            onPress={() => router.push("/(tabs)/add")}
+            onPress={() => router.push("/add")}
           >
             <Text style={styles.createButtonText}>Create Timer</Text>
           </TouchableOpacity>
@@ -156,7 +156,7 @@ export default function HomeScreen() {
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={
           <>
-            <Hero />
+            {/* <Hero /> */}
             <View style={styles.header}>
               <Text
                 style={[
@@ -168,7 +168,7 @@ export default function HomeScreen() {
               </Text>
               <TouchableOpacity
                 style={styles.addButton}
-                onPress={() => router.push("/(tabs)/add")}
+                onPress={() => router.push("/add")}
               >
                 <Text style={styles.addButtonText}>+</Text>
               </TouchableOpacity>
