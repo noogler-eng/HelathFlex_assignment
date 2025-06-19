@@ -48,3 +48,14 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+
+- it is working locally and succesfully build apk
+- but when i install apk it crases (i have tried many ways, trying it out first time)
+- https://expo.dev/accounts/0xsharad/projects/react-native-multi-timer/builds/c39bf2b5-3681-463f-bb0d-0557aae1ce72
+
+## this is my artifacts 
+- https://expo.dev/artifacts/eas/42PhxHHdv1Jda66BFoQqNZ.aab 
+
+## this is my apk
+https://expo.dev/accounts/0xsharad/projects/react-native-multi-timer/builds/c39bf2b5-3681-463f-bb0d-0557aae1ce72
